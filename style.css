@@ -18,17 +18,17 @@
     --soft-blue:hsl(215, 51%, 70%);
     --cyan:hsl(178deg 51% 59% / 56%);
 }
-body{
-    overflow-x: hidden;
+
+.wrapper-flex{
+    display: flex;
+    align-items: center;
 }
 
 .container{
-    width: 99vw;
-    height: 150vh;
-    display: flex;
-    align-items: center;
+    min-height: 100vh;
     justify-content: center;
     background: var(--main-bg);
+    padding: 20px 0px;
 }
 
 .card{
@@ -36,9 +36,8 @@ body{
     width: 350px;
     height: 600px;
     border-radius: 12px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
+
     
 
 }
@@ -58,8 +57,6 @@ body{
     left: 0;
     right: 0;
     border-radius: 12px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     display: flex;
     opacity: 0;
@@ -83,13 +80,18 @@ body{
 .card-content{
     margin: 20px 0px;
     padding: 5px 18px;
-    display: flex;
     flex-direction: column;
+    align-items: initial;
     
     
 }
 .card-title{
     color: var(--white);
+    cursor: pointer;
+}
+
+.card-title:hover{
+    color: var(--soft-blue);
 }
 
 .card-text{
@@ -103,15 +105,14 @@ body{
 
 .card-timeline{
     margin-top: 18px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+
 }
 
 .timestamp{
     color: var(--white);
-    display: flex;
+    align-items: initial;
+
 }
 
 .timestamp:nth-child(2) p{
@@ -132,9 +133,6 @@ body{
 .profile{
     margin-left: 35px;
     margin-top: 18px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     width: 100%;
 }
 
@@ -153,8 +151,13 @@ body{
 
 .profile p span{
     color: var(--white);
+    cursor: pointer;
+    font-weight: bold;
 }
 
+.profile p span:hover{
+    color: var(--soft-blue);
+}
 /* adjusting the card for tablets and phones */
 
 @media (min-width:300px) and (max-width:450px){
