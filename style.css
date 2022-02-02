@@ -1,0 +1,174 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* Css Reset */
+*{
+    padding:0;
+    margin:0;
+    border:0;
+    font-family: "Outfit" ,sans-serif;
+}
+
+/* CSS Variables */
+:root{
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --line:hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+    --soft-blue:hsl(215, 51%, 70%);
+    --cyan:hsl(178deg 51% 59% / 56%);
+}
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    width: 99vw;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-bg);
+}
+
+.card{
+    background-color: var(--card-bg);
+    width: 350px;
+    height: 600px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.card-img{
+    margin-top: 20px;
+    position: relative;
+    cursor: pointer;
+}
+/* Setting the hover effect on the card image */
+
+.effect{
+    transition:all 0.4s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+}
+
+
+ .card-img:hover > .effect{
+    background-color: var(--cyan);
+    opacity: 1;
+
+}
+
+
+
+.card-img img:nth-child(2){
+    width: 310px;
+    height: 310px;
+    border-radius: 12px;
+}
+
+.card-content{
+    margin: 20px 0px;
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.card-title{
+    color: var(--white);
+}
+
+.card-text{
+    margin-top: 18px;
+    font-size: 18px;
+    color: var(--soft-blue);
+
+}
+
+
+
+.card-timeline{
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timestamp{
+    color: var(--white);
+    display: flex;
+}
+
+.timestamp:nth-child(2) p{
+    color: var(--soft-blue);
+}
+
+
+.timestamp img{
+    margin-right: 10px;
+}
+
+.line{
+    width: 90%;
+    height: 2px;
+    background-color: var(--line);
+}
+
+.profile{
+    margin-left: 35px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.profile img{
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile p{
+    margin-left: 15px;
+    color: var(--soft-blue);
+
+}
+
+.profile p span{
+    color: var(--white);
+}
+
+/* adjusting the card for tablets and phones */
+
+@media (min-width:300px) and (max-width:450px){
+   
+    .card{
+        width:310px;
+        height: 535px;
+    }
+    .card-img img:nth-child(2){
+        width: 271px;
+        height: 271px;
+    }
+
+    .card-content ,.card-text , .card-timeline , .profile{
+        margin-top: 14px;
+    }
+}
