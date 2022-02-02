@@ -1,7 +1,7 @@
 
 ## Project Preview
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/aayushsingh-459666/nft-preview-card-component/blob/master/images/project%20preview.jpeg)
 
 
 # NTF preview card component
